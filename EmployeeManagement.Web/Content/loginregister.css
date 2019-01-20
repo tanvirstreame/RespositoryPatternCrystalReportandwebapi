@@ -1,0 +1,16 @@
+﻿input{
+    margin:5px;
+}
+label{
+    margin:5px;
+}
+.box{
+    background-color:aliceblue;
+    height:250px;
+}
+.loginform{
+    margin-top:100px;
+}
+a{
+    margin:5px;
+}
