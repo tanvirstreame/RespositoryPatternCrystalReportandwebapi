@@ -37,6 +37,7 @@ namespace EmployeeManagement.Web.Controllers
             var data=_employee.CheckLogIn(email, password);
             if (data > 0)
             {
+                Session["user"] = email;
                 return Redirect("/Home/ViewData");
             }
             return Redirect("/");
@@ -56,9 +57,18 @@ namespace EmployeeManagement.Web.Controllers
         [HttpGet]
         public new ActionResult ViewData()
         {
-            ViewBag.Data = _employee.GetEmpolyee();
-            return View();
+            if (Session["user"] != null)
+            {
+
+                ViewBag.Data = _employee.GetEmpolyee();
+                return View();
+            }
+            else
+            {
+                return Redirect("/");
+            }
         }
+        [HttpGet]
         public ActionResult Export()
         {
             ReportDocument re = new ReportDocument();
