@@ -9,7 +9,7 @@ namespace EmployeeManagement.Repository.interfaces
 {
    public interface IEmployeeRepository:IDisposable
     {
-        IEnumerable<Employee> GetEmpolyee();
+        List<Employee> GetEmpolyee();
         void Add(Employee employee);
         void Find(int id);
         int CheckLogIn(String email, string password);

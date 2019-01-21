@@ -42,7 +42,7 @@ namespace EmployeeManagement.Repository
             _context.Employee.Find(id); 
         }
 
-        public IEnumerable<Employee> GetEmpolyee()
+        public List<Employee> GetEmpolyee()
         {
             var data=_context.Employee.ToList();
             return data;

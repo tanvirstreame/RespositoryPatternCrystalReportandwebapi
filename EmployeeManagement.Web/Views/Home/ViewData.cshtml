@@ -3,7 +3,7 @@
     ViewBag.Title = "ViewData";
 }
 @{ 
-    IEnumerable<Employee> data = ViewBag.Data;
+    List<Employee> data = ViewBag.Data;
 }
 <h2>ViewData</h2>
 <table class="table-bordered">
@@ -23,4 +23,4 @@
     </tr>
             } }
 </table>
-
+<a href="/Home/Export">Export</a>
